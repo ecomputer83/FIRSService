@@ -10,7 +10,8 @@
     "@azure/functions": "^4.0.0",
     "dotenv": "^17.0.1",
     "firs-einvoicing": "^1.0.14",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "qrcode": "^1.5.4"
   },
   "main": "src/{index.js,functions/*.js}"
 }

@@ -18,6 +18,17 @@ const payloadConvert = (payload) => {
     accounting_cost: `${payload.accountingCost} ${payload.documentCurrencyCode}`, //optional
     buyer_reference: payload.buyerReference, //optional
     order_reference: payload.orderReference, //optional
+    accounting_customer_party: {
+        party_name: payload.businessName,
+        tin: payload.businessTin,
+        email: payload.businessEmail,
+        postal_address: {
+            street_name: payload.businessAddress, 
+            city_name: payload.businessCity, 
+            postal_zone: payload.businessPostalCode, 
+            country: payload.businessCountry 
+        } 
+    },
     accounting_supplier_party: {
         party_name: payload.companyName, 
         tin: payload.companyTin, // now mandatory 
